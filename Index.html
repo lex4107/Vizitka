@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Визитка</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --accent: #fbbf24; /* Золотистый акцент */
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            background-image: radial-gradient(circle at top right, #1e293b, #0f172a);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: var(--text-main);
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 2.5rem 1.5rem;
+            border-radius: 24px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            width: 90%;
+            max-width: 380px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .profile-img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 3px solid var(--accent);
+            padding: 5px;
+            margin-bottom: 1.5rem;
+            object-fit: cover;
+        }
+
+        h1 { margin: 0; font-size: 26px; letter-spacing: -0.5px; }
+        .subtitle { color: var(--accent); font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin: 8px 0 24px; }
+        
+        .links { display: flex; flex-direction: column; gap: 14px; }
+        
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-main);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+            border-color: var(--accent);
+        }
+
+        /* Иконки (эмодзи) делаем чуть крупнее */
+        .btn span { margin-right: 10px; font-size: 18px; }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <img src="https://via.placeholder.com/110" alt="Фото" class="profile-img">
+    
+    <h1>Иван Иванов</h1>
+    <div class="subtitle">Специалист по маркетингу</div>
+
+    <div class="links">
+        <a href="tel:+79991112233" class="btn"><span>📞</span> +7 (999) 111-22-33</a>
+        <a href="tel:+79994445566" class="btn"><span>📞</span> +7 (999) 444-55-66</a>
+        
+        <div class="social-grid">
+            <a href="https://t.me/username" target="_blank" class="btn"><span>✈️</span> Telegram</a>
+            <a href="https://wa.me/79991112233" target="_blank" class="btn"><span>💬</span> WhatsApp</a>
+        </div>
+        
+        <a href="https://instagram.com/username" target="_blank" class="btn"><span>📸</span> Instagram</a>
+    </div>
+</div>
+
+</body>
+</html>
